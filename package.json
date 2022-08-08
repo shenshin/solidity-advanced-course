@@ -1,25 +1,24 @@
 {
   "name": "solidity-advanced-course",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Solidity developer course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier --write 'contracts/**/*.sol'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["solidity"],
+  "author": "Aleksandr Shaenshin",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "hardhat": "^2.10.1",
     "prettier": "^2.7.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1"
-  },
-  "dependencies": {
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
     "@openzeppelin/contracts": "^4.7.2"
   }
 }
