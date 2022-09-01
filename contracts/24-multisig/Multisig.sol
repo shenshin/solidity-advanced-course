@@ -19,10 +19,6 @@ contract Multisig {
     event Confirmed(bytes32 txId, address sender);
     event CanceledConfirmation(bytes32 txId, address sender);
 
-    function _checkIfQueued(bytes32 _txId) private view {
-        require(queue[_txId], 'tx is not queued');
-    }
-
     modifier isQueued(bytes32 _txId) {
         _checkIfQueued(_txId);
         _;
@@ -131,5 +127,9 @@ contract Multisig {
         uint256 _value
     ) private pure returns (bytes32) {
         return keccak256(abi.encode(_to, _data, _value));
+    }
+
+    function _checkIfQueued(bytes32 _txId) private view {
+        require(queue[_txId], 'tx is not queued');
     }
 }
