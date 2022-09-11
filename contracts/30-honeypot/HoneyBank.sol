@@ -21,13 +21,14 @@ contract HoneyBank is Ownable {
 
     bool resuming;
 
+    // substitute Logger with malicious one
     constructor(IHoneyLogger _logger) {
         logger = _logger;
     }
 
-    /*     function setLogger(IHoneyLogger _logger) public onlyOwner {
+      function setLogger(IHoneyLogger _logger) public onlyOwner {
         logger = _logger;
-    } */
+    }
 
     function deposit() public payable {
         require(msg.value >= 1 ether);
