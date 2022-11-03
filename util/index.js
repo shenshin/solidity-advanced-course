@@ -2,6 +2,9 @@ async function deployContract(name, ...params) {
   const ContractFactory = await ethers.getContractFactory(name);
   const contract = await ContractFactory.deploy(...params);
   await contract.deployed();
+  console.log(
+    `${name} was deployed at ${hre.network.name} with address ${contract.address}`,
+  );
   return contract;
 }
 

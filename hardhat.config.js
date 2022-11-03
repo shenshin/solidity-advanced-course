@@ -17,7 +17,8 @@ module.exports = {
     },
     rsktestnet: {
       chainId: 31,
-      url: 'https://public-node.testnet.rsk.co/',
+      // url: 'https://public-node.testnet.rsk.co/',
+      url: 'http://localhost:4444',
       accounts: {
         mnemonic,
         path: "m/44'/60'/0'/0",

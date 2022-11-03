@@ -16,9 +16,11 @@
       "prettier/prettier": ["error"],
       "import/no-extraneous-dependencies": "off",
       "import/extensions": "off",
-      "no-unused-expressions": "off"
+      "no-unused-expressions": "off",
+      "no-console": "off"
     },
     "globals": {
+      "hre": "readonly",
       "task":"readonly",
       "describe":"readonly",
       "it":"readonly",
