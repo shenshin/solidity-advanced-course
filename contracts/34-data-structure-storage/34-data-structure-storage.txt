@@ -1,0 +1,37 @@
+Places to keep data in blockchain:
+
+stack (LIFO) --> direct, pointers
+  max 1024 blocks by 32 bytes each
+  Solidity doesnt have access to it
+
+storage --> mappings, direct, reference 
+  is created only at deploy time
+
+memory --> reference, direct, !mappings
+  multivalue, lookup (dynamic arr, bytes)
+
+calldata --> reference, direct, !mapping
+  first 4 bytes - func selector
+  is immutable
+  CALLDATASIZE instruction
+
+code (bytecode) --> constant / immutable (only direct types)
+  
+
+
+
+Stack and storage consist of "words" or "slots" 256 bit (32 bytes) each
+Others consist of byte sequences
+Big-endian is (left to right) is used in ethereum
+
+Types:
+
+- direct (uintN, bytesN, bool, address (160bit), enums, internal, external)
+  - storage --> packed (uint128 + uint128 are packed together)
+  - memory / calldata / code / stack --> padded (filled by 0s if type is < word)
+- multivalue (arrays of type[n], struct)
+- lookup (uint[], mappings, bytes, string - unlimited # of elems)
+
+- reference --> multivalue / lookup
+- static --> direct / multivalue(static)
+- dynamic --> !static
