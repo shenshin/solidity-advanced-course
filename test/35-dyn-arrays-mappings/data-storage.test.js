@@ -1,14 +1,4 @@
-const { ethers, expect, loadFixture } = require('../../util/tests-setup');
-
-function interval(start, end, step = 1) {
-  const result = [];
-  for (let i = start; i <= end; i += step) {
-    result.push(i);
-  }
-  return result;
-}
-
-const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
+const { ethers, loadFixture } = require('../../util/tests-setup');
 
 describe('Data storage', () => {
   const deploy = async () => {
@@ -18,10 +8,6 @@ describe('Data storage', () => {
 
     return { dataStorage };
   };
-
-  async function getAt(addr, slot) {
-    return ethers.provider.getStorageAt(addr, slot);
-  }
 
   it('displays slots', async () => {
     const { dataStorage } = await loadFixture(deploy);
@@ -41,7 +27,7 @@ describe('Data storage', () => {
         console.log(
           slot.toString(),
           '--->',
-          await getAt(dataStorage.address, slot),
+          await ethers.provider.getStorageAt(dataStorage.address, slot),
         );
       }),
     );
