@@ -1,4 +1,4 @@
-const { ethers, loadFixture } = require('../../util/tests-setup');
+const { ethers, loadFixture } = require('../../../util/tests-setup');
 
 describe('Data storage', () => {
   const deploy = async () => {

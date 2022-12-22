@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { deployContract } = require('../../util');
+const { deployContract } = require('../../../util');
 
 describe('Inheritance', () => {
   let html;

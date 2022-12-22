@@ -1,4 +1,4 @@
-const { loadFixture, ethers, expect } = require('../../util/tests-setup.js');
+const { loadFixture, ethers, expect } = require('../../../util/tests-setup.js');
 
 describe('Demo', () => {
   async function deploy() {

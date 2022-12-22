@@ -1,4 +1,9 @@
-const { ethers, expect, loadFixture, time } = require('../../util/tests-setup');
+const {
+  ethers,
+  expect,
+  loadFixture,
+  time,
+} = require('../../../util/tests-setup');
 /* 
 recreate solidity getPrice() function offchain
 

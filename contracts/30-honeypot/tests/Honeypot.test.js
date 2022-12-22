@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
-const { deployContractBySigner } = require('../../util');
+const { deployContractBySigner } = require('../../../util');
 
 describe('Honeypot', () => {
   let deployer;

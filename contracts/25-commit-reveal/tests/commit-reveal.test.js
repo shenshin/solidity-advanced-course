@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
-const { deployContract } = require('../../util');
+const { deployContract } = require('../../../util');
 
 describe('Commit Reveal', () => {
   let voter;

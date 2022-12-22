@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 const { time } = require('@nomicfoundation/hardhat-network-helpers');
-const { deployContract } = require('../../util');
+const { deployContract } = require('../../../util');
 
 describe('Crowdfunding', () => {
   let deployer;
